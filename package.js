@@ -1,12 +1,12 @@
 Package.describe({
-  name: 'iron:dynamic-template',
-  summary: 'Dynamically create and update templates and their data contexts.',
-  version: '1.0.12',
-  git: 'https://github.com/iron-meteor/iron-dynamic-template'
+  name: 'meteorhubdotnet:iron-dynamic-template',
+  summary: 'Fork of iron:dynamic-template for Firestorm',
+  version: '1.0.0',
+  git: 'https://github.com/meteorhubdotnet/iron-dynamic-template'
 });
 
 Package.on_use(function (api) {
-  api.versionsFrom('METEOR@0.9.2');
+  api.versionsFrom('METEOR@2.2');
 
   api.use('blaze');
   api.use('underscore');
@@ -17,19 +17,19 @@ Package.on_use(function (api) {
   api.use('templating');
   api.use('random');
 
-  api.use('iron:core@1.0.11');
-  api.imply('iron:core');
+  api.use('meteorhubdotnet:firestorm-iron-core');
+  api.imply('meteorhubdotnet:firestorm-iron-core');
 
-  api.add_files('version_conflict_error.js');
+  // api.add_files('version_conflict_error.js');
   api.add_files('dynamic_template.html');
   api.add_files('dynamic_template.js');
   api.add_files('blaze_overrides.js');
 });
 
 Package.on_test(function (api) {
-  api.versionsFrom('METEOR@0.9.2');
+  api.versionsFrom('METEOR@2.2');
 
-  api.use('iron:dynamic-template');
+  api.use('meteorhubdotnet:firestorm-iron-dynamic-template');
   api.use('templating');
   api.use('tinytest');
   api.use('test-helpers');
