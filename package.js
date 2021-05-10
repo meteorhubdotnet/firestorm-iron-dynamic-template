@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'meteorhubdotnet:iron-dynamic-template',
+  name: 'meteorhubdotnet:firestorm-iron-dynamic-template',
   summary: 'Fork of iron:dynamic-template for Firestorm',
   version: '1.0.0',
   git: 'https://github.com/meteorhubdotnet/iron-dynamic-template'
