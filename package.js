@@ -1,12 +1,12 @@
 Package.describe({
   name: 'meteorhubdotnet:firestorm-iron-dynamic-template',
   summary: 'Fork of iron:dynamic-template for Firestorm',
-  version: '1.0.4',
+  version: '1.0.5',
   git: 'https://github.com/meteorhubdotnet/iron-dynamic-template'
 });
 
-Package.on_use(function (api) {
-  api.versionsFrom('METEOR@2.2');
+Package.onUse(function (api) {
+  api.versionsFrom('METEOR@2.3.6');
 
   api.use('blaze@2.4.0');
   api.use('underscore');
@@ -17,17 +17,17 @@ Package.on_use(function (api) {
   api.use('templating@1.4.0');
   api.use('random');
 
-  api.use('meteorhubdotnet:firestorm-iron-core@1.0.4');
-  api.imply('meteorhubdotnet:firestorm-iron-core@1.0.4');
+  api.use('meteorhubdotnet:firestorm-iron-core@1.0.5');
+  api.imply('meteorhubdotnet:firestorm-iron-core@1.0.5');
 
-  // api.add_files('version_conflict_error.js');
-  api.add_files('dynamic_template.html');
-  api.add_files('dynamic_template.js');
-  api.add_files('blaze_overrides.js');
+  // api.addFiles('version_conflict_error.js');
+  api.addFiles('dynamic_template.html');
+  api.addFiles('dynamic_template.js');
+  api.addFiles('blaze_overrides.js');
 });
 
-Package.on_test(function (api) {
-  api.versionsFrom('METEOR@2.2');
+Package.onTest(function (api) {
+  api.versionsFrom('METEOR@2.3.6');
 
   api.use('meteorhubdotnet:firestorm-iron-dynamic-template');
   api.use('templating');
@@ -36,6 +36,6 @@ Package.on_test(function (api) {
   api.use('blaze');
   api.use('deps');
 
-  api.add_files('dynamic_template_test.html', 'client');
-  api.add_files('dynamic_template_test.js', 'client');
+  api.addFiles('dynamic_template_test.html', 'client');
+  api.addFiles('dynamic_template_test.js', 'client');
 });
