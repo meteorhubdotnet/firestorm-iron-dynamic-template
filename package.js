@@ -1,7 +1,7 @@
 Package.describe({
   name: 'meteorhubdotnet:firestorm-iron-dynamic-template',
   summary: 'Fork of iron:dynamic-template for Firestorm',
-  version: '1.0.7',
+  version: '1.0.10',
   git: 'https://github.com/meteorhubdotnet/iron-dynamic-template'
 });
 
@@ -13,11 +13,11 @@ Package.onUse(function (api) {
   api.use('jquery@3.0.0');
   api.use('tracker');
   api.use('reactive-var');
-  api.use('templating');
+  api.use('templating@1.4.2');
   api.use('random');
 
-  api.use('meteorhubdotnet:firestorm-iron-core@1.0.7');
-  api.imply('meteorhubdotnet:firestorm-iron-core@1.0.7');
+  api.use('meteorhubdotnet:firestorm-iron-core@1.0.10');
+  api.imply('meteorhubdotnet:firestorm-iron-core@1.0.10');
 
   // api.addFiles('version_conflict_error.js');
   api.addFiles('dynamic_template.html');
@@ -29,7 +29,7 @@ Package.onTest(function (api) {
   api.versionsFrom('METEOR@2.7.3');
 
   api.use('meteorhubdotnet:firestorm-iron-dynamic-template');
-  api.use('templating');
+  api.use('templating@1.4.2');
   api.use('tinytest');
   api.use('test-helpers');
   api.use('blaze@2.6.1');
